@@ -1,7 +1,8 @@
+
 class Obstacle{
-  constructor(idkWhateverWasPassedToObstacle, index){
-    this.p = createVector(width, random(164, height));
-    this.v = createVector(-random(1,3), 0);
+  constructor(x, index){
+    this.p = createVector(x, random(164, height));
+    this.v = createVector(-random(5,10), 0);
     this.size = createVector(100,50);
     this.typeOfObstacle = index;
   }
@@ -29,6 +30,9 @@ class Obstacle{
 			if (turtleHeight + 164 >= this.p.y && turtleHeight < this.p.y) hit = true;
 		}
 
+  }
+  checkCollision(turtle){
+    
   }
   move(){
     this.p.add(this.v);

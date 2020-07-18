@@ -3,20 +3,6 @@ let win1, win2, turtleHeight, lives = 0, score = 0;
 var level = [];
 let descriptionText, instructionsText, surveyText, winText, gameOverText;
 
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-}
-
-function preload(){
-  turtleImg = loadImage('images/turtle.png'); //1573x984
-  mirrorTurtleImg = loadImage('images/mirror_turtle.png');
-  swimTurtleImg = loadImage('images/swimturtle.png');
-  backgroundImg = loadImage('images/background.png');
-	bagImg = loadImage('images/bag.png');
-  bottleImg = loadImage('images/bottle.png');
-  loadText();
-}
-
 function setup(){
   createCanvas(windowWidth, windowHeight);
   turtleHeight = height/2;
