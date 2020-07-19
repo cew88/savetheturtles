@@ -95,7 +95,7 @@ function op(){
 }
 function backButton(){
   back = createButton("← Back");
-  back.position(width/10 + 50,  height * 2/3);
+  back.position(width/10 + 50, height * 2/3);
   back.style("font-family", "Pacifico");
   back.style("background-color","lightblue");
   back.style("border","0px");
