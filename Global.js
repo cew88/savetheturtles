@@ -48,7 +48,7 @@ class Obstacle{
     if(rng < map(trash,-5,0,0.25,0.5)){
       this.setImage(0);
       this.isJelly = true;
-    }else if(rng < 0.95 - map(trash,-5,0,0,0.4)){
+    }else if(rng < 0.95 + map(trash,-5,0,0,0.4)){
       this.setImage(Math.floor(random(1,7)));
     }else{
       this.setImage(7);
