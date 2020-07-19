@@ -6,4 +6,17 @@ canvas {
 	margin: 0;
 	padding: 0;
 }
+#p5_loading {
+  background-color: rgb(96, 186, 191);
+	width: 100vw;
+	height: 100vh;
+	/* display: flex; */
+	text-align: center;
+	line-height: 100vh;
+	font-size: 5em;
+	font-family: Pacifico;
+}
 
+#p5_loading p{
+	margin-left: 40vw;
+}

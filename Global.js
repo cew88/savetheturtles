@@ -13,7 +13,7 @@ function preload(){
   swimTurtleImg = loadImage('images/swimturtle.png');
 	sodaImg = loadImage('images/6pack.png');
 	strawImg = loadImage('images/straw.png');
-  turtleImg = loadImage('images/turtle.png'); //1573x984
+  turtleImg = loadImage('images/turtle.png');
   deadTurtleImg = loadImage('images/deadTurtle.png');
   netImg = loadImage('images/net.png');
   hatImg = loadImage('images/pirateHat.png');
@@ -22,6 +22,7 @@ function preload(){
 
   loadText();
 }
+
 function loadText(){
   descriptionText = "An estimated 14 billion pounds of plastic is deposited into the ocean every year, posing a threat to the entire ocean ecosystem. Part of these endangered species are turtles. \n\nOver 1,000,000 marine animals, including over 1,000 turtles, are killed each year due to plastic waste such as fishing nets, six pack rings from canned drinks, plastic bags, and most infamously, plastic straws.";
 
@@ -34,9 +35,6 @@ function loadText(){
 
 
 //----------OBSTACLE CLASS--------
-// jelly: 0 bottle: 1, oil: 2, bag: 3, 6pack: 4
-
-
 
 let trash = -parseInt(localStorage.getItem('slider'));
 
@@ -48,7 +46,7 @@ class Obstacle{
     if(rng < map(trash,-5,0,0.25,0.5)){
       this.setImage(0);
       this.isJelly = true;
-    }else if(rng < 0.9 + map(trash,-5,0,0,0.04)){
+    }else if(rng < map(trash,-5,0,0.95,0.99)){
       this.setImage(Math.floor(random(1,7)));
     }else{
       this.setImage(7);
