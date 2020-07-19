@@ -1,5 +1,5 @@
 let gameStarted = false;
-let win1, win2, turtleHeight, lives = 0, score = 0;
+let win1, win2, lives = 0, score = 0;
 let hit = false;
 let level = [];
 let descriptionText, instructionsText, surveyText, winText, gameOverText;
@@ -26,12 +26,6 @@ function setup(){
   win1.noStroke();
   win1.rect(0, 0, win1.width, win1.height, 10);
 
-  turtleHeight = height/2;
-	for (let i = 0; i < 100; i++){
-		let o = new Obstacle(width + i*width/3, i);
-		level.push(o);
-	}
-
   //Create button to navigate to the next page
   next = createButton("Next → ");
   next.position(win1.width*2/3-50, 575);
@@ -44,8 +38,8 @@ function setup(){
 
   //Initialize slider for page 3
   slider = createSlider(0, 5, 1);
-  slider.position(width/10 + 300, 525);
-  slider.size(200,20);
+  slider.position(width/10 + win1.width/4, 525);
+  slider.size(win1.width/2,20);
   slider.hide();
 
 	draw_intro();
@@ -85,8 +79,8 @@ function draw_intro(){
 	 	win1.text(surveyText, 50, 50, win1.width*2/3-50, win1.height-50);
     backButton();
     slider.show();
-    win1.text("0", width/10 + 100, 312);
-    win1.text("5+", width/10 + 350, 312);
+    win1.text("0", width/10 + win1.width/10, 312);
+    win1.text("5+", width/10 + win1.width*3/4 - win1.width/7, 312);
     surveyQuestion = slider.value();
     }
 
@@ -109,7 +103,6 @@ function op(){
   }
 	draw_intro();
 }
-
 function backButton(){
   back = createButton("← Back");
   back.position(width/10 + 50, 575);
